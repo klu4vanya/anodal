@@ -17,7 +17,21 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 150px;
+    background-position: 0 170px;
+}
+
+.header-content {
+    display: flex;
+}
+
+.header-content img {
+    height: 527px;
+    width: 372px;
+    position: relative;
+    float: right;
+    margin-top: 100px;
+    margin-left: 60px;
+    margin-bottom: 30px;
 }
 
 .header-line {
@@ -71,6 +85,7 @@ body {
     position: relative;
 }
 
+/*
 .header-title {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -83,19 +98,21 @@ body {
     margin-top: 150px;
     margin-left: 100px;
 }
+*/
 
 .header-subtitle {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 25px;
     text-align: left;
     word-spacing: 17px;
     line-height: 50px;
-    position: absolute;
-    left: 0;
-    margin-top: 250px;
-    margin-left: 100px;
+    position: relative;
+    float: left;
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 60%;
 }
 
 .history-block {
@@ -259,7 +276,6 @@ body {
 
 .content {
     display: flex;
-
     align-items: center;
 }
 
@@ -268,9 +284,7 @@ body {
     font-weight: 500;
     font-size: 20px;
     color: #fff;
-
     margin-left: 100px;
-
     float: left;
     width: 50%;
     line-height: 40px;
@@ -278,14 +292,13 @@ body {
 
 .shot-blasting-img {
     width: 500px;
-    /*    max-width: 30%;*/
+    border: 2px solid #fff;
     margin-left: 50px;
 
 }
 
 .back-res {
     margin-top: 100px;
-    background-image: url(images/back-mec.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -295,74 +308,43 @@ body {
     font-weight: 500;
     font-size: 30px;
     color: #fff;
-    text-align: left;
-    margin-left: 20%;
-    padding-top: 100px;
+    text-align: center;
+    padding-top: 30px;
     margin-bottom: 50px;
 }
 
-.mec-res-subtitle {
+
+.box-holder {
+    display: flex;
+    justify-content: center;
+
+}
+
+.tor-title,
+.drilling-title,
+.felling-title,
+.milling-title,
+.countersinking-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: #fff;
-    line-height: 40px;
-    margin-left: 25%;
-}
-
-#more {
-    display: none;
-    padding: 10px;
-    animation: 5s show ease;
-    border: 2px solid #fff;
-    width: 50%;
-}
-
-#more-2 {
-    display: none;
-    padding: 10px;
-    animation: 5s show ease;
-    border: 2px solid #fff;
-    width: 50%;
-}
-
-#more-3 {
-    display: none;
-    padding: 10px;
-    animation: 5s show ease;
-    border: 2px solid #fff;
-    width: 50%;
+    text-align: left;
+    margin-left: 15%;
 }
 
 .back-more {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.btns {
-    display: inline-block;
-    background-color: #0477BF;
-    padding: 14px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
     color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.3s linear;
-    border: none;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition-duration: 0.5s;
-    transition-property: box-shadow, transform;
+    line-height: 40px;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
-.btns:hover,
-.btns:active {
-    background-color: #5594BD;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-}
+
 
 @keyframes show {
     from {
@@ -374,9 +356,30 @@ body {
     }
 }
 
-.footer {
+.production-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+.production-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    line-height: 40px;
+}
+
+footer {
     background: #455D73;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -384,6 +387,85 @@ body {
     width: 100vw;
     font-family: 'Open Sans', sans-serif;
     padding-top: 40px;
+
+}
+
+
+.form {
+    /* margin-top: 300px; */
+    width: 500px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative
+}
+
+h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    /* width: 180px; */
+    color: #455D73;
+    border-bottom: 3px solid #455D73
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #455D73;
+    color: #455D73;
+}
+
+input:focus {
+    border-bottom: 2px solid #78788c
+}
+
+.msg {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #455D73;
+    background: 0;
+    color: #455D73;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.msg:hover {
+    background: #01378C;
+    color: #fff
+}
+
+.contacts {
+    content: 'Hi';
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #455D73;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000
+}
+
+.contacts span {
+    margin: 0 5px 0 15px
 }
 
 .footer-content {
@@ -396,16 +478,16 @@ body {
 
 .content-holder {
     display: flex;
-    padding:  0 10%;
+    padding: 0 10%;
     justify-content: space-between;
-    
+
     /*    position: absolute;*/
 }
 
 
-.content-holder p{
-    color:  #BBBBBB;
-    
+.content-holder p {
+    color: #BBBBBB;
+
 }
 
 .footer-content h3 {
@@ -423,38 +505,12 @@ body {
     line-height: 28px;
     font-size: 14px;
 }
-.content-holder p span{
+
+.content-holder p span {
     font-size: 0.9rem;
     color: #fff;
 }
 
-.socials {
-    margin-top: 50px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-
-.socials li {
-    margin: 0 10px;
-}
-
-.socials a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.socials a i {
-    transition: color 0.4s ease;
-    font-size: 1.1rem;
-}
-
-.socials a:hover i {
-    color: aqua;
-
-}
 
 .footer-bottom {
     width: 100vw;
@@ -470,9 +526,128 @@ body {
     text-transform: capitalize;
 }
 
-.footer-bottom span {
-    text-transform: uppercase;
-    opacity: 0.3;
-    font-weight: 200;
 
+.mySlides1,
+.mySlides2 {
+    display: none;
+}
+
+
+/* Slideshow container */
+.slide-shows {
+    margin-top: 50px;
+    margin-right: 100px;
+    display: grid;
+}
+
+.slideshow-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    margin-left: 100px;
+    border: 2px solid #fff
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover,
+.next:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.production-images {
+    display: flex;
+    position: relative;
+    float: left;
+
+}
+
+.production-images img {
+    margin-bottom: 60px;
+    width: 500px;
+    border: 2px solid #fff;
+    margin-left: 50px;
+
+}
+
+.production-content {
+    display: flex;
+}
+
+.production-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+    width: 50%;
+    line-height: 40px;
+    float: right;
+    position: relative;
+}
+
+.production-subtitle a {
+    text-decoration: underline;
+    cursor: pointer;
 }

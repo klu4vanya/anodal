@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
     <!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />-->
@@ -29,11 +30,11 @@
                     <img class='phone_img_pos' src="assets/images/logo.png">
                 </div>
                 <div class='nav'>
-                    <a class='nav-item' href="@">ГЛАВНАЯ</a>
-                    <a class='nav-item' href="@">ПРОИЗВОДСТВЕННЫЙ ЦИКЛ</a>
-                    <a class='nav-item' href="@">О КОМПАНИИ</a>
-                    <a class='nav-item' href="@">ОПЛАТА И ДОСТАВКА</a>
-                    <a class='nav-item' href="@">КОНТАКТЫ</a>
+                    <a onclick="scrollToElement_production()" class='nav-item'>ПРОИЗВОДСТВО</a>
+                    <a onclick="scrollToElement()" class='nav-item'>О КОМПАНИИ</a>
+                    <a onclick="scrollToElement_tg()" class='nav-item'>ОПЛАТА И ДОСТАВКА</a>
+                    <a onclick="scrollToElement_contacts()" class='nav-item'>КОНТАКТЫ</a>
+                    <a onclick="scrollToElement_mec()" class='nav-item'>МЕХАНИЧЕСКАЯ ОБРАБОТКА</a>
                 </div>
                 <div class='phone'>
                     <div class='phone-holder'>
@@ -46,27 +47,39 @@
             </div>
         </div>
         <div class='header-down'>
-            <div class='header-title'>
-                Мы занимаемся
-            </div>
-            <div class='header-subtitle'>
-                Мы занимаемся анодированием алюминиевого профиля с 2016 года.<br> Создаём продукт по чертежам Заказчика и <br>осуществляем электро-химическую и <br>механическую обработку сырья от российских производителей.
+            <div class="header-content">
+                <div class='header-subtitle'>
+                    ООО "АНОДАЛ" создано в 2016г. Основным направлением компании является электрохимическая
+                    (анодирование)
+                    обработка алюминиевого профиля и деталей для применения в разных сферах деятельности, таких как:<br>
+                    • приборостроение<br>
+                    • авто- авиа-, судо-, машиностроение<br>
+                    • корпусная мебель (шкафы купе, кухонные гарнитуры)<br>
+                    • строительство (профиль для конвекторных решёток, облицовочный профиль);<br>
+                    • светотехника (LED профиль для линейных светильников)<br>
+                </div>
+                <img src="assets/images/sertificate.jpg">
             </div>
         </div>
     </div>
     <div class='history-block'>
         <div class='container'>
             <div class='history-info'>
-                <div class='history-title'>
+                <div id="about" class='history-title'>
                     О компании
                 </div>
                 <div class='company-imgs'>
-                    <img class='first-image' src="assets/images/about2.jpg"><br>
-                    <img class='second-image' src="assets/images/about.jpg"><br>
-                    <img class='thirst-image' src="assets/images/about3.jpg">
+                    <img class='first-image' src="assets/images/about_2.jpg"><br>
+                    <img class='second-image' src="assets/images/profil.jpg"><br>
+                    <img class='thirst-image' src=" assets/images/about.jpg">
+
                 </div>
                 <div class='history-text'>
-                    Anodal — это компания, основанная в 2016 году. Мы специализируемся на услугах по анодированию, которые включают покрытие алюминиевых поверхностей для повышения их долговечности и устойчивости к коррозии. В 2022 году Anodal представили новую линию анодирования, которая позволила нам увеличить производственную мощность до 600 000 м² в год. Для обеспечения высокого качества услуг мы используем передовое технологическое оборудование из Германии и Италии.<br> <span>Возможности:</span>
+                    Anodal — это компания, основанная в 2016 году. Мы специализируемся на услугах по анодированию,
+                    которые включают покрытие алюминиевых поверхностей для повышения их долговечности и устойчивости к
+                    коррозии. В 2022 году Anodal представили новую линию анодирования, которая позволила нам увеличить
+                    производственную мощность до 600 000 м² в год. Для обеспечения высокого качества услуг мы используем
+                    передовое технологическое оборудование из Германии и Италии.<br> <span>Возможности:</span>
                     <a class='anodizing-al-href' href="#">• Анодирование алюминиевого профиля</a> <br>
                     <a class='shot-blasting-href' href="#">• Дробеструйная обработка</a><br>
                     <a class='mechanical-restoration-href' href="#">• Механическая обработка</a><br>
@@ -86,13 +99,16 @@
                 Анодирование алюминия
             </div>
             <div class='anodizing-al-subtitle'>
-                Анодирование - декоративно-защитный способ покрытия алюминия, более стойкий к воздействию агрессивной среды по сравнению с порошково-полимерной покраской.<br>
-                После процедуры анодирования алюминиевому прокату и профилю не грозит коррозия. Защитная пленка, которая образуется на металле в процессе анодирования, отличается высокой стойкостью к износу. Такое покрытие не отслоится по прошествии времени.<br>
+                Анодирование - декоративно-защитный способ покрытия алюминия, более стойкий к воздействию агрессивной
+                среды по сравнению с порошково-полимерной покраской.<br>
+                После процедуры анодирования алюминиевому прокату и профилю не грозит коррозия. Защитная пленка, которая
+                образуется на металле в процессе анодирования, отличается высокой стойкостью к износу. Такое покрытие не
+                отслоится по прошествии времени.<br>
                 <span>Покрытие:</span><br>
                 <a>• Защитное</a><br>
                 <a>• Защитно-декоративное</a>
             </div>
-            <a href="#" class='al-button'>Узнать подробнее</a>
+            <a onclick="scrollToElement_tg()" class='al-button'>Узнать подробнее</a>
         </div>
 
 
@@ -104,86 +120,282 @@
             </div>
             <div class='content'>
                 <div class='shot-blasting-subtitle'>
-                    Дробеструйная обработка - это механический процесс, который осуществляется с помощью подачи частиц абразивного материала (нержавеющая дробь мелкой фракции) на поверхность алюминиевого профиля с большой скоростью за счет действия центробежной силы.
-                    С помощью обработки алюминиевого профиля на дробемётном оборудовании очищается поверхность и задается ей равномерная шероховатость. Дробемёт применяют перед покраской и анодированием как для очистки, так и для получения декоративной матовой текстуры.
+                    Дробеструйная обработка - это механический процесс, который осуществляется с помощью подачи частиц
+                    абразивного материала (нержавеющая дробь мелкой фракции) на поверхность алюминиевого профиля с
+                    большой скоростью за счет действия центробежной силы.
+                    С помощью обработки алюминиевого профиля на дробемётном оборудовании очищается поверхность и
+                    задается ей равномерная шероховатость. Дробемёт применяют перед покраской и анодированием как для
+                    очистки, так и для получения декоративной матовой текстуры.
                 </div>
 
                 <img class='shot-blasting-img' src="assets/images/shot.jpg">
             </div>
-            <div class='back-res'>
-                <div class='mec-res-title'>
-                    Типы механической обработки:
-                </div>
-                <div class='mec-res-subtitle'>
-                    <div class="box">
-                        
-                        <button id="btn" class='btns' onclick="readMore()">• Торцевание</button>
-                        <div class='back-more'>
-                            <span id="more" class="mores">Производится на высокоскоростной пиле с нижней подачей, оснащённой пневмоприжимами и возможностью изменения угла реза<br>
-                            </span>
-                        </div>
+        </div>
+    </div>
 
-                        <button id="btn-2" class='btns' onclick="readMore2()">• Вырубка</button>
-                       
-                        <div class='back-more'>
-                            <span id="more-2" class="mores">Производится на кривошипном прессе усилием 25 тонн. По техническому заданию Заказчика изготавливается пресс-форма, параметры которой согласовываются с Заказчиком на основании опытного образца.<br>
-                            </span>
-                        </div>
-                        <button id="btn-3" class='btns' onclick="readMore3()">• Сверление</button>
-                       
-                        <div class='back-more'>
-                            <span id="more-3" class="mores">Применяется для получения отверстий под:<br>
-                                Резьбу<br>
-                                Заклепки<br>
-                                Крепежные болты и т.д.<br>
-                            </span>
-                        </div>
+    <div class='back-res'>
+        <div id="mec-res" class='mec-res-title'>
+            Типы механической обработки:
+        </div>
+        <div class='mec-res-subtitle'>
+            <div class='box-holder'>
 
-                        • Фрезеровка<br>
-                        • Зенкование<br><br>
+                <div class='box'>
+                    <!-- <button id="btn" class='btns' onclick="readMore()">• Торцевание</button> -->
+                    <div class="tor-title">
+                        • Торцевание
                     </div>
+                    <div class='back-more'>
+                        Производится на высокоскоростной пиле с нижней подачей,
+                        оснащённой пневмоприжимами и возможностью изменения угла реза.<br>
+                    </div>
+
+                    <!-- <button id="btn-2" class='btns' onclick="readMore2()">• Вырубка</button> -->
+                    <div class="felling-title">
+                        • Вырубка
+                    </div>
+                    <div class='back-more'>
+                        Производится на кривошипном прессе усилием 25 тонн. По
+                        техническому заданию Заказчика изготавливается пресс-форма, параметры которой
+                        согласовываются с Заказчиком на основании опытного образца.<br>
+                    </div>
+                    <!-- <button id="btn-3" class='btns' onclick="readMore3()">• Сверление</button> -->
+                    <div class="drilling-title">
+                        • Сверление
+                    </div>
+                    <div class='back-more'>
+                        Применяется для получения отверстий под:<br>
+                        • Резьбу<br>
+                        • Заклепки<br>
+                        • Крепежные болты и т.д.<br>
+                    </div>
+                    <!-- <button id="btn-4" class='btns' onclick="readMore4()">• Фрезеровка</button> -->
+                    <div class="milling-title">
+                        • Фрезеровка
+                    </div>
+                    <div class='back-more'>
+                        Фрезеровка - это процесс обработки поверхности материала
+                        с помощью фрезы, которая вращается вокруг своей оси и удаляет слой материала. Она
+                        используется для создания различных форм, отверстий и рельефов на поверхности
+                        материала.<br>
+                    </div>
+                    <!-- <button id="btn-5" class='btns' onclick="readMore5()">• Зенкование</button> -->
+                    <div class="countersinking-title">
+                        • Зенкование
+                    </div>
+                    <div class='back-more'>
+                        Зенкование - это процесс создания углубления или
+                        отверстия в материале с помощью специального инструмента, называемого зенкером. Он
+                        используется для скрытого закрепления крепежных элементов или для создания
+                        сглаженных краев деталей.<br>
+                    </div>
+
+                </div>
+                <!-- Slideshow container -->
+                <div class="slide-shows">
+                    <div class="slideshow-container">
+                        <div class="mySlides1 fade">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="assets/images/trimm.jpg" style="width:500px; height: 500px;">
+                        </div>
+
+                        <div class="mySlides1 fade">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="assets/images/s.jpg" style="width:500px; height: 500px;">
+                        </div>
+
+                        <div class="mySlides1 fade">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="assets/images/machine.jpg" style="width:500px; height: 500px;">
+                        </div>
+                        <div class="mySlides1 fade">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="assets/images/svetilnik.jpg" style="width:500px; height: 500px;">
+                        </div>
+                        <div class="mySlides1 fade">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="assets/images/upakovka.jpg" style="width:500px; height: 500px;">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+                        <a class="next" onclick="plusSlides(1, 0)">❯</a>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides2 fade">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="assets/images/frezerovka.jpg" style="width:500px; height: 500px;">
+                        </div>
+
+                        <div class="mySlides2 fade">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="assets/images/zenk.JPG" style="width:500px; height: 500px;">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="assets/images/23.jpg" style="width:500px; height: 500px;">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="assets/images/reshetka.jpg" style="width:500px; height: 500px;">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="assets/images/svetilnik2.png" style="width:500px; height: 500px;">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+                        <a class="next" onclick="plusSlides(1, 1)">❯</a>
+                    </div>
+                </div>
+                <script>
+                    var slideIndex = [1, 1];
+                    var slideId = ["mySlides1", "mySlides2"]
+                    showSlides(1, 0);
+                    showSlides(1, 1);
+
+                    function plusSlides(n, no) {
+                        showSlides(slideIndex[no] += n, no);
+                    }
+
+                    function showSlides(n, no) {
+                        var i;
+                        var x = document.getElementsByClassName(slideId[no]);
+                        if (n > x.length) { slideIndex[no] = 1 }
+                        if (n < 1) { slideIndex[no] = x.length }
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        x[slideIndex[no] - 1].style.display = "block";
+                    }
+                </script>
+            </div>
+
+        </div>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+        <script src="script.js"></script>
+        <div class="production">
+            <div class="production-holder">
+                <div id="production-title" class="production-title">
+                    Производство
+                </div>
+                <div class="production-content">
+                    <div class="production-images">
+                        <img src="assets/images/colors.jpg">
+                    </div>
+                    <p class="production-subtitle">
+                        Производственный комплекс ANODAL предлагает как поставку анодированного алюминиевого профиля
+                        собственного производства, так и обработку материала по ТУ Заказчика длиной до 3,2 метра (в
+                        цветах "серебро",
+                        "шампань", "бронза", "чёрный" по системе стандарта качества QUALANOD). А также <a
+                            onclick="scrollToElement_mec()">дополнительную обработку материала.</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2471.183990017408!2d36.2605093!3d51.72967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412f0410e1d4ccf1%3A0x2c87a7aa02b23948!2z0YPQuy4gMy3RjyDQkNCz0YDQtdCz0LDRgtC90LDRjywgMjPQuywg0JrRg9GA0YHQuiwg0JrRg9GA0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAzMDUwMjI!5e0!3m2!1sru!2sua!4v1678036619979!5m2!1sru!2sua" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-    <footer>
-        <div class='footer-content'>
-            <h3>Связаться с нами</h3>
-        </div>
-        <div class='content-holder'>
+        <footer>
+            <div class="map-form">
+                <div style="position:relative;overflow:hidden;"><a
+                        href="https://yandex.ru/maps/8/kursk/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Курск</a><a
+                        href="https://yandex.ru/maps/8/kursk/house/3_ya_agregatnaya_ulitsa_23n/Z08YdAJkTUEFQFtrfXtzeXhjbQ==/?ll=36.254442%2C51.728409&utm_medium=mapframe&utm_source=maps&z=16.71"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">3-я Агрегатная улица, 23Н —
+                        Яндекс Карты</a><iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=36.254442%2C51.728409&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyNTMyMzIwMTQ1Eo0B0KDQvtGB0YHQuNGPLCDQs9C-0YDQvtC00YHQutC-0Lkg0L7QutGA0YPQsyDQmtGD0YDRgdC6LCDQltC10LvQtdC30L3QvtC00L7RgNC-0LbQvdGL0Lkg0L7QutGA0YPQsywgMy3RjyDQkNCz0YDQtdCz0LDRgtC90LDRjyDRg9C70LjRhtCwLCAyM9CdIgoNjQQRQhXk6U5C&z=16.71"
+                        width="100%" height="400" frameborder="1" allowfullscreen="true"
+                        style="position:relative;"></iframe>
+                </div>
 
-            <p>
-                <span>Адрес: </span><br>
-                г. Курск, ул. 3-я Агрегатная, д. 23Л<br>
-            </p>
+            </div>
+            <div id="contacts" class='footer-content'>
+                <h3>Связаться с нами</h3>
+            </div>
+            <form id='tg' class="form">
+
+                <p type="Name:">
+                    <input name="name" placeholder="Напишите ваше имя...">
+                </p>
+                <p type="Phone:">
+                    <input name="phone" placeholder="Ваш номер...">
+                </p>
+                <p type="Message:">
+                    <input name="message" placeholder="Ваше сообщение...">
+                </p>
+
+                <button class="msg" type='submit'>Отправить сообщение</button>
+                <div class='contacts'>
+                    <span class="fa fa-phone"></span>
+                    +7 4712 999-013
+                    <span class="fa fa-envelope-o"></span> info@anodkursk.ru
+                </div>
+            </form>
+            <script>
+                const TOKEN = "6168990538:AAHxtUytFWy1em2yNbCr9lh4PCeCN_zLLkQ";
+                const CHAT_ID = "-1001917177632";
+                const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+                document.getElementById('tg').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    let message = `<b>заявка с сайта</b>\n`;
+                    message += `<b>отправитель: </b> ${this.name.value}\n`;
+                    message += `<b>телефон: </b> ${this.phone.value}\n`;
+                    message += `<b>сообщение: </b> ${this.message.value}`;
+
+                    if (this.name.value === '' && this.phone.value === '' && this.message.value === '') {
+                        alert('Данные не указаны');
+                    } else {
+
+                        axios.post(URI_API, {
+                            chat_id: CHAT_ID,
+                            parse_mode: 'html',
+                            text: message
+                        })
+                            .then((res) => {
+                                this.name.value = "";
+                                this.phone.value = "";
+                                this.message.value = "";
+                            })
+                            .catch((err) => {
+                                console.warn(err);
+                            })
+                            .finally(() => {
+                                console.log('end');
+                            })
+                    }
+                })
+
+            </script>
+
+            <div class='content-holder'>
+
+                <p>
+                    <span>Адрес: </span><br>
+                    г. Курск, ул. 3-я Агрегатная, д. 23Н<br>
+                </p>
 
 
-            <p>
-                <span>Телефоны:</span><br>
-                +7 4712 999-013<br>
-                +7 951 322-12-02<br>
-                +7 977 479-60-65<br>
-            </p>
+                <p>
+                    <span>Телефоны:</span><br>
+                    +7 4712 999-013<br>
+                    +7 951 322-12-02<br>
+                    +7 977 479-60-65<br>
+                </p>
 
 
-            <p>
-                <span>Электронная почта:</span><br>
-                info@anodkursk.ru
-            </p>
+                <p>
+                    <span>Электронная почта:</span><br>
+                    info@anodkursk.ru
+                </p>
 
-
-            <ul class='socials'>
-                <li><a href="#"><i class='fa fa-instagram'></i></a></li>
-                <li><a href="#"><i class='fa fa-vk'></i></a></li>
-                <li><a href="#"><i class='fa fa-whatsapp'></i></a></li>
-            </ul>
-        </div>
-        <div class='footer-bottom'>
-            <p>copyright &copy;2023 Anodal. designed by <span>klu4</span></p>
-        </div>
-    </footer>
+            </div>
+            <div class='footer-bottom'>
+                <p>copyright &copy;2023 Anodal.</p>
+            </div>
+        </footer>
 </body>
 
 </html>
